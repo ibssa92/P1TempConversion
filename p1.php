@@ -52,7 +52,7 @@ if(isset($_POST['Conversion'])){// show conversion
     
     echo "<h2 align=center><font color=blue>". $temp ."</font> degrees ". $unitOfMeasure1 . "converts to ";
   	echo "<font color=red>" . (round($equation, 2)) ."</font> degrees ". $unitOfMeasure2 . ".";
-  	echo '<br><a href="http://www.ibssawado.dreamhosters.com/itc250/p1.php">Reset page</a>';
+  	echo '<br><a href="../p1.php">Reset page</a>';
     
 }else{// show form
     echo '
