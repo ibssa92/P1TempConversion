@@ -50,10 +50,14 @@ switch($conversion){
 }  
 if(isset($_POST['Conversion'])){// show conversion
     
-    echo "<h2 align=center><font color=blue>". $temp ."</font> degrees ". $unitOfMeasure1 . "converts to ";
-  	echo "<font color=red>" . (round($equation, 2)) ."</font> degrees ". $unitOfMeasure2 . ".";
-    //Liyun's edit: clicking on Reset page will go back to the same page
-  	echo '<br><a href="">Reset page</a>';
+    if(is_numeric($temp)){
+        echo "<h2 align=center><font color=blue>". $temp ."</font> degrees ". $unitOfMeasure1 . " converts to ";
+  	    echo "<font color=red>" . (round($equation, 2)) ."</font> degrees ". $unitOfMeasure2 . ".";
+  	    echo '<br><a href="">Reset page</a>';
+    } else {
+        echo "enter a numberic variable";
+        echo '<br><a href="">Reset page</a>';
+    }
     
 }else{// show form
     echo '
